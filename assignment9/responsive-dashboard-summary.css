@@ -1,0 +1,183 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Keyframe Load Animation */
+@keyframes dashboardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Desktop CSS Grid Layout: Header, Sidebar, Main Content, Footer */
+.dashboard-layout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+}
+
+.dash-header {
+    grid-area: header;
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 1.15rem 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #2563eb;
+}
+
+.dash-header h1 {
+    font-size: 1.35rem;
+}
+
+.dash-header span {
+    background-color: #1e293b;
+    color: #38bdf8;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.dash-sidebar {
+    grid-area: sidebar;
+    background-color: #1e293b;
+    color: #f8fafc;
+    padding: 1.75rem 1.25rem;
+}
+
+.dash-sidebar h2 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+
+.dash-sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dash-sidebar a {
+    display: block;
+    color: #e2e8f0;
+    text-decoration: none;
+    padding: 0.55rem 0.85rem;
+    border-radius: 6px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.dash-sidebar a:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.dash-main {
+    grid-area: main;
+    padding: 2rem;
+    animation: dashboardEnter 0.6s ease-out forwards;
+}
+
+/* Cards Grid Inside Main Content */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.dash-card {
+    background-color: #ffffff;
+    padding: 1.75rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Scale-Up with Shadow Effect */
+.dash-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.16);
+}
+
+.dash-card h2 {
+    color: #1d4ed8;
+    font-size: 1.25rem;
+    margin-bottom: 0.65rem;
+}
+
+.dash-card p {
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+.resource-list {
+    margin-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.resource-list a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.resource-list a:hover {
+    text-decoration: underline;
+}
+
+.dash-footer {
+    grid-area: footer;
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Below 750px: Sidebar Shifts Above Main Content and Cards Stack */
+@media (max-width: 750px) {
+    .dashboard-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    .dash-sidebar ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

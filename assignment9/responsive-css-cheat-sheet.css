@@ -1,0 +1,109 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    background-color: #0f172a;
+    color: #f8fafc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.header p {
+    color: #cbd5e1;
+    margin-top: 0.35rem;
+}
+
+.container {
+    flex: 1;
+    max-width: 1140px;
+    width: 100%;
+    margin: 2.5rem auto;
+    padding: 0 1.25rem;
+}
+
+/* Large Screens: 3-Column CSS Grid */
+.cheat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.cheat-box {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-left: 5px solid #2563eb;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-left-color 0.25s ease;
+}
+
+.cheat-box:hover {
+    transform: translateY(-4px);
+    border-left-color: #059669;
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.11);
+}
+
+.cheat-box h2 {
+    font-size: 1.2rem;
+    color: #0f172a;
+    margin-bottom: 0.6rem;
+}
+
+.cheat-box p {
+    font-size: 0.94rem;
+    color: #475569;
+}
+
+/* Medium Screens: 2-Column Grid */
+@media (max-width: 960px) {
+    .cheat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Below 700px: Stacked Rows Where Heading Acts as Key Followed by Value */
+@media (max-width: 700px) {
+    .cheat-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+    }
+
+    .cheat-box {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 1rem;
+        padding: 1.15rem;
+    }
+
+    .cheat-box h2 {
+        flex: 0 0 135px;
+        font-size: 1rem;
+        color: #1d4ed8;
+        margin-bottom: 0;
+    }
+
+    .cheat-box h2::after {
+        content: ":";
+    }
+
+    .cheat-box p {
+        flex: 1;
+        font-size: 0.92rem;
+    }
+}

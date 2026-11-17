@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard Summary</title>
+    <link rel="stylesheet" href="responsive-dashboard-summary.css">
+</head>
+<body>
+    <!-- Grid Dashboard Shell -->
+    <div class="dashboard-layout">
+        <!-- Header -->
+        <header class="dash-header">
+            <h1>CSS Responsive Design Dashboard</h1>
+            <span>Assignment 9 Summary</span>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="dash-sidebar" aria-label="Dashboard Navigation">
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="#filters-card">CSS Filters</a></li>
+                <li><a href="#typography-card">Fluid Typography</a></li>
+                <li><a href="#media-card">Media Queries</a></li>
+                <li><a href="#cheatsheet-card">Cheat Sheet Links</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="dash-main">
+            <section class="cards-grid" aria-label="Responsive Topics">
+                <article id="filters-card" class="dash-card">
+                    <h2>Filters</h2>
+                    <p>Apply non-destructive visual effects such as <code>grayscale()</code>, <code>sepia()</code>, and <code>brightness()</code> with smooth hover resets.</p>
+                </article>
+
+                <article id="typography-card" class="dash-card">
+                    <h2>Typography</h2>
+                    <p>Scale headings and paragraphs smoothly across screen sizes using <code>clamp()</code> and relative <code>rem</code> units.</p>
+                </article>
+
+                <article id="media-card" class="dash-card">
+                    <h2>Media Queries</h2>
+                    <p>Adapt multi-column grids and sidebars cleanly at key breakpoints like <code>750px</code> and <code>600px</code>.</p>
+                </article>
+
+                <article id="cheatsheet-card" class="dash-card">
+                    <h2>Cheat Sheet Links</h2>
+                    <ul class="resource-list">
+                        <li><a href="responsive-image-filter-gallery.html">Image Filter Gallery</a></li>
+                        <li><a href="responsive-typography.html">Fluid Typography Guide</a></li>
+                        <li><a href="responsive-css-cheat-sheet.html">Complete CSS Cheat Sheet</a></li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="dash-footer">
+            <p>Assignment 9 &bull; Responsive Dashboard Summary</p>
+        </footer>
+    </div>
+</body>
+</html>

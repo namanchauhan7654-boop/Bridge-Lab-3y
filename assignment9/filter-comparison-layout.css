@@ -1,0 +1,86 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    background-color: #0f172a;
+    color: #f8fafc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.header p {
+    color: #cbd5e1;
+    margin-top: 0.35rem;
+}
+
+.container {
+    flex: 1;
+    max-width: 1120px;
+    width: 100%;
+    margin: 2.5rem auto;
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Side-by-Side Comparison on Desktop */
+.compare-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.compare-card {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.1);
+}
+
+.compare-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Right Image CSS Filter with Smooth Fade-Out on Hover */
+.filtered-target {
+    filter: contrast(185%) brightness(75%) grayscale(80%);
+    transition: filter 0.45s ease-in-out;
+    cursor: pointer;
+}
+
+.filtered-target:hover {
+    filter: contrast(100%) brightness(100%) grayscale(0%);
+}
+
+figcaption {
+    padding: 1rem 1.25rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #0f172a;
+}
+
+/* Stack Vertically Below 700px */
+@media (max-width: 700px) {
+    .compare-wrapper {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,112 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    background-color: #0f172a;
+    color: #f8fafc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.header p {
+    color: #cbd5e1;
+    margin-top: 0.35rem;
+}
+
+.container {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Desktop Default: 4 Columns with Equal Spacing (gap: 1.5rem) */
+.cards-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.media-card {
+    /* 4 equal columns accounting for three 1.5rem gaps */
+    flex: 0 1 calc(25% - 1.125rem);
+    background-color: #ffffff;
+    padding: 1.75rem;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    margin-bottom: 0.85rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.media-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.6rem;
+    color: #0f172a;
+    transition: color 0.3s ease;
+}
+
+.media-card p {
+    font-size: 0.95rem;
+    color: #475569;
+    transition: color 0.3s ease;
+}
+
+/* Hover Background & Text Color Change */
+.media-card:hover {
+    background-color: #1e3a8a;
+    border-color: #1e3a8a;
+}
+
+.media-card:hover h2,
+.media-card:hover p {
+    color: #ffffff;
+}
+
+.media-card:hover .tag {
+    background-color: #38bdf8;
+    color: #0f172a;
+}
+
+/* Tablet Breakpoint (max-width: 900px): 2 Columns */
+@media (max-width: 900px) {
+    .media-card {
+        flex: 0 1 calc(50% - 0.75rem);
+    }
+}
+
+/* Mobile Breakpoint (max-width: 600px): 1 Column */
+@media (max-width: 600px) {
+    .media-card {
+        flex: 1 1 100%;
+    }
+}

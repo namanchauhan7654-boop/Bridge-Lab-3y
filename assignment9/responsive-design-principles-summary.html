@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Principles Summary</title>
+    <link rel="stylesheet" href="responsive-design-principles-summary.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Three Core Principles of Responsive Web Design</h1>
+        <p>Hover over any principle card to highlight with a rich gradient transition.</p>
+    </header>
+
+    <main class="container">
+        <!-- Three-Column CSS Grid -->
+        <section class="principles-grid" aria-label="Responsive Design Pillars">
+            <article class="principle-box">
+                <h2>1. Fluid Layouts</h2>
+                <p>Replace rigid pixel widths with proportional percentages, Flexbox, or Grid tracks so containers expand and contract naturally.</p>
+                <pre><code>.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}</code></pre>
+            </article>
+
+            <article class="principle-box">
+                <h2>2. Flexible Media</h2>
+                <p>Constrain images and embedded videos so they scale down proportionally inside narrow containers without overflowing.</p>
+                <pre><code>img, video {
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+            </article>
+
+            <article class="principle-box">
+                <h2>3. Breakpoints</h2>
+                <p>Use CSS media queries to reorganize multi-column grids into readable single-column layouts at key screen thresholds.</p>
+                <pre><code>@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}</code></pre>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Assignment 9 &bull; Responsive Design Principles Summary</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Responsive Web Demo</title>
+    <link rel="stylesheet" href="combined-responsive-web-demo.css">
+</head>
+<body>
+    <!-- Flexbox Header & Navigation -->
+    <header class="site-header">
+        <div class="nav-container">
+            <span class="logo">ResponsiveLab</span>
+            <nav aria-label="Main Menu">
+                <ul class="nav-links">
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#cheatsheet">Cheat Sheet</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Grid with 3 Integrated Sections + Fade-In Animation -->
+    <main class="main-grid fade-in">
+        <!-- Section 1: Image Gallery -->
+        <section id="gallery" class="panel gallery-panel">
+            <h2>1. Filter Gallery Preview</h2>
+            <div class="mini-gallery">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200'><rect width='300' height='200' fill='%232563eb'/><circle cx='150' cy='100' r='55' fill='%2393c5fd'/></svg>" alt="Blue geometric circle">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200'><rect width='300' height='200' fill='%23059669'/><polygon points='150,30 250,170 50,170' fill='%236ee7b7'/></svg>" alt="Emerald triangle shape">
+            </div>
+            <p class="note">Hover over thumbnails to clear grayscale filter.</p>
+        </section>
+
+        <!-- Section 2: Responsive Design Explanation -->
+        <section id="overview" class="panel text-panel">
+            <h2>2. Why Responsive Design Matters</h2>
+            <p>
+                Modern web traffic spans compact smartphones, tablets, laptops, and ultra-wide monitors. Rather than maintaining separate websites, responsive CSS combines <strong>Flexbox</strong>, <strong>CSS Grid</strong>, and fluid typography to adapt a single codebase gracefully across every viewport.
+            </p>
+        </section>
+
+        <!-- Section 3: Cheat Sheet Preview -->
+        <section id="cheatsheet" class="panel cheat-panel">
+            <h2>3. Quick Cheat Sheet</h2>
+            <ul class="quick-list">
+                <li><strong>Flexbox:</strong> <code>display: flex;</code> for 1D navbars &amp; rows.</li>
+                <li><strong>Grid:</strong> <code>grid-template-columns</code> for 2D page layouts.</li>
+                <li><strong>Clamp:</strong> <code>clamp(1rem, 2.5vw, 2rem)</code> for fluid text.</li>
+                <li><strong>Filters:</strong> <code>filter: grayscale(100%);</code> with smooth hover reset.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer with Contact Information -->
+    <footer id="contact" class="site-footer">
+        <p>Contact: hello@responsivelab.example &bull; +91 98765 43210 &bull; Assignment 9</p>
+    </footer>
+</body>
+</html>

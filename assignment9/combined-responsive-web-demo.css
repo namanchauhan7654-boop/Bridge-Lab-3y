@@ -1,0 +1,170 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Flexbox Header and Navigation */
+.site-header {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    border-bottom: 3px solid #2563eb;
+}
+
+.nav-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #38bdf8;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: #e2e8f0;
+    text-decoration: none;
+    padding: 0.45rem 0.85rem;
+    border-radius: 6px;
+    transition: background-color 0.25s ease;
+}
+
+.nav-links a:hover {
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+/* Fade-in Animation */
+@keyframes pageFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: pageFadeIn 0.65s ease-out forwards;
+}
+
+/* Main Content Using CSS Grid for 3 Sections */
+.main-grid {
+    flex: 1;
+    max-width: 1160px;
+    width: 100%;
+    margin: 2.5rem auto;
+    padding: 0 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    align-items: stretch;
+}
+
+.panel {
+    background-color: #ffffff;
+    padding: 1.75rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.12);
+}
+
+.panel h2 {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eff6ff;
+    padding-bottom: 0.45rem;
+}
+
+.mini-gallery {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.mini-gallery img {
+    width: 50%;
+    border-radius: 8px;
+    filter: grayscale(100%);
+    transition: filter 0.35s ease, transform 0.35s ease;
+}
+
+.mini-gallery img:hover {
+    filter: none;
+    transform: scale(1.04);
+}
+
+.note {
+    font-size: 0.88rem;
+    color: #64748b;
+}
+
+.text-panel p {
+    font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+    color: #334155;
+}
+
+.quick-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    font-size: 0.92rem;
+}
+
+.quick-list li {
+    background-color: #f8fafc;
+    padding: 0.55rem 0.75rem;
+    border-radius: 6px;
+    border-left: 3px solid #2563eb;
+}
+
+.site-footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 1.25rem;
+    font-size: 0.9rem;
+}
+
+/* Stack All Sections Vertically Below 700px */
+@media (max-width: 700px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+}

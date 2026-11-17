@@ -1,0 +1,125 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    background-color: #0f172a;
+    color: #f8fafc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.header p {
+    color: #cbd5e1;
+    margin-top: 0.35rem;
+}
+
+.container {
+    flex: 1;
+    max-width: 1100px;
+    width: 100%;
+    margin: 2.5rem auto;
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Flexbox Row for 3 Profile Cards */
+.profile-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1.75rem;
+    width: 100%;
+}
+
+/* Keyframe Fade-In Animation on Page Load */
+@keyframes fadeInLoad {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-card {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    animation: fadeInLoad 0.7s ease forwards;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card-delay-1 { animation-delay: 0.05s; }
+.card-delay-2 { animation-delay: 0.2s; }
+.card-delay-3 { animation-delay: 0.35s; }
+
+/* Lift Card on Hover */
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 34px rgba(15, 23, 42, 0.16);
+}
+
+.avatar-filter {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #e2e8f0;
+    transition: filter 0.35s ease, border-color 0.35s ease;
+}
+
+.grayscale-img { filter: grayscale(100%); }
+.sepia-img     { filter: sepia(90%); }
+
+/* Remove Image Filter on Card Hover */
+.profile-card:hover .avatar-filter {
+    filter: none;
+    border-color: #2563eb;
+}
+
+.profile-card h2 {
+    font-size: 1.3rem;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+}
+
+.role {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.85rem;
+}
+
+.bio {
+    color: #475569;
+    font-size: 0.94rem;
+}
+
+/* Stack Cards Vertically Below 800px */
+@media (max-width: 800px) {
+    .profile-row {
+        flex-direction: column;
+    }
+}

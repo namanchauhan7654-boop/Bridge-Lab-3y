@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design Layout</title>
+    <link rel="stylesheet" href="responsive-web-design-layout.css">
+</head>
+<body>
+    <!-- Header with Logo Left & Nav Links Right -->
+    <header class="top-header">
+        <div class="header-container">
+            <a href="#home" class="brand-logo">FlexCraft</a>
+            <nav aria-label="Primary Navigation">
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Area with Three Horizontal Feature Boxes -->
+    <main class="main-content">
+        <section class="intro-banner">
+            <h1>Adaptive Flexbox Homepage</h1>
+            <p>Resize the viewport below <strong>750px</strong> to watch the three feature boxes stack vertically.</p>
+        </section>
+
+        <section id="features" class="features-row" aria-label="Core Features">
+            <article class="feature-box">
+                <h2>Fluid Alignment</h2>
+                <p>Flexbox automatically distributes horizontal space across varying desktop and laptop screen widths.</p>
+            </article>
+
+            <article class="feature-box">
+                <h2>Smooth Micro-Interactions</h2>
+                <p>Hovering over any feature card triggers a gentle scale-up transform paired with elevated shadows.</p>
+            </article>
+
+            <article class="feature-box">
+                <h2>Mobile-First Stacking</h2>
+                <p>Below 750px, media queries switch the flex direction to a clean single-column mobile stack.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Centered Footer at Bottom -->
+    <footer class="bottom-footer">
+        <p>&copy; 2026 FlexCraft Studio &bull; Assignment 9: Responsive Web Design Layout</p>
+    </footer>
+</body>
+</html>

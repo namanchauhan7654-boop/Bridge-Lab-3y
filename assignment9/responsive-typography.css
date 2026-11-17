@@ -1,0 +1,82 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-header, .page-footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 1.15rem;
+    font-size: 0.9rem;
+}
+
+.main-stage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1.5rem;
+}
+
+/* Centered Section with Balanced Margins and Padding */
+.typography-hero {
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3.5rem 2.75rem;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+    text-align: center;
+}
+
+/* Required Fluid Heading Scale */
+h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 1.35rem;
+    letter-spacing: -0.02em;
+}
+
+/* Required Fluid Paragraph Scale */
+p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #334155;
+    line-height: 1.65;
+    max-width: 68ch;
+    margin: 0 auto;
+}
+
+.page-footer p {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+/* Adjust line-height and spacing below 700px for better mobile readability */
+@media (max-width: 700px) {
+    .typography-hero {
+        padding: 2rem 1.35rem;
+    }
+
+    h1 {
+        line-height: 1.32;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        line-height: 1.8;
+    }
+}

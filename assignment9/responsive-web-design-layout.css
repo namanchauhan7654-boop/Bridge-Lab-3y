@@ -1,0 +1,149 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header with Logo Left and Navigation Right */
+.top-header {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    border-bottom: 3px solid #2563eb;
+}
+
+.header-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand-logo {
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+}
+
+.nav-list a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.nav-list a:hover {
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    max-width: 1120px;
+    width: 100%;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.intro-banner {
+    text-align: center;
+}
+
+.intro-banner h1 {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.intro-banner p {
+    color: #475569;
+}
+
+/* Three Feature Boxes Arranged Horizontally */
+.features-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1.75rem;
+}
+
+.feature-box {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Slight Scale-Up on Hover */
+.feature-box:hover {
+    transform: scale(1.04);
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.16);
+}
+
+.feature-box h2 {
+    color: #1d4ed8;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.feature-box p {
+    color: #475569;
+    font-size: 0.96rem;
+}
+
+/* Centered Footer at Bottom */
+.bottom-footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 1.25rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive Breakpoint Below 750px */
+@media (max-width: 750px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .features-row {
+        flex-direction: column;
+    }
+}
