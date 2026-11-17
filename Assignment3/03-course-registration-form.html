@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Registration Form</title>
+</head>
+<body>
+    <h1>Course Registration</h1>
+
+    <!-- Fieldset groups the student's registration details. -->
+    <form action="#" method="get">
+        <fieldset>
+            <legend>Student Details</legend>
+
+            <label for="student-name">Full Name:</label>
+            <input type="text" id="student-name" name="student-name" required>
+            <br><br>
+
+            <label for="student-email">Email:</label>
+            <input type="email" id="student-email" name="student-email" required>
+            <br><br>
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course">
+                <option value="html">HTML Fundamentals</option>
+                <option value="css">CSS Basics</option>
+                <option value="javascript">JavaScript Introduction</option>
+                <option value="java">Java Programming</option>
+            </select>
+            <br><br>
+
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+        </fieldset>
+    </form>
+
+    <h2>Available Course Schedules</h2>
+    <table border="1">
+        <thead>
+            <tr><th>Day</th><th>Time</th><th>Instructor</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Monday</td><td>10:00 AM - 11:00 AM</td><td>Mr. Sharma</td></tr>
+            <tr><td>Wednesday</td><td>11:00 AM - 12:00 PM</td><td>Ms. Verma</td></tr>
+            <tr><td>Friday</td><td>2:00 PM - 3:00 PM</td><td>Mr. Singh</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>
