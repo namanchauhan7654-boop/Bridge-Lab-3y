@@ -1,0 +1,184 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    background-color: #1e293b;
+    text-align: center;
+    padding: 1.35rem 1rem;
+    border-bottom: 1px solid #334155;
+}
+
+.footer {
+    border-bottom: none;
+    border-top: 1px solid #334155;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+/* Vertical and Horizontal Centering via Flexbox */
+.animation-stage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1.25rem;
+}
+
+.animation-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    max-width: 1060px;
+    width: 100%;
+}
+
+.anim-card {
+    flex: 1 1 280px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    padding: 1.75rem;
+    text-align: center;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+
+.anim-card h2 {
+    font-size: 1.2rem;
+    color: #38bdf8;
+}
+
+.anim-card p {
+    font-size: 0.88rem;
+    color: #cbd5e1;
+}
+
+/* ==========================================================================
+   1. MOVING / SLIDING BOX ANIMATION
+   ========================================================================== */
+.track {
+    background-color: #0f172a;
+    padding: 0.75rem;
+    border-radius: 10px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.sliding-box {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: slideHorizontal;
+    animation-duration: 2.2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slideHorizontal {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    100% {
+        transform: translateX(155px) rotate(180deg);
+    }
+}
+
+/* ==========================================================================
+   2. BOUNCING BALL ANIMATION
+   ========================================================================== */
+.bounce-well {
+    background-color: #0f172a;
+    border-radius: 10px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+
+.bouncing-ball {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #fbbf24, #d97706);
+    animation-name: bounceVertical;
+    animation-duration: 0.9s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes bounceVertical {
+    0% {
+        transform: translateY(0) scaleX(1.12) scaleY(0.88);
+    }
+    100% {
+        transform: translateY(-68px) scaleX(0.96) scaleY(1.04);
+    }
+}
+
+/* ==========================================================================
+   3. COLOR-CHANGING TEXT ANIMATION
+   ========================================================================== */
+.text-well {
+    background-color: #0f172a;
+    border-radius: 10px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-text {
+    font-size: 1.85rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    animation-name: colorShift;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes colorShift {
+    0% {
+        color: #38bdf8;
+        transform: scale(0.95);
+    }
+    50% {
+        color: #a855f7;
+    }
+    100% {
+        color: #f43f5e;
+        transform: scale(1.08);
+    }
+}

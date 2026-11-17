@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3: Responsive Image Showcase Layout</title>
+    <link rel="stylesheet" href="q3_image_showcase.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Architectural &amp; Nature Gallery</h1>
+        <p>Hover over any card to scale the artwork and reveal the darkened overlay.</p>
+    </header>
+
+    <main class="container">
+        <!-- CSS Grid Gallery (3 columns desktop, 1 column below 700px) -->
+        <section class="gallery-grid" aria-label="Image Showcase">
+            <figure class="gallery-card">
+                <div class="image-frame">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><defs><linearGradient id='g1' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%231e3a8a'/><stop offset='100%' stop-color='%2338bdf8'/></linearGradient></defs><rect width='600' height='400' fill='url(%23g1)'/><polygon points='0,400 180,170 360,400' fill='%230f172a' opacity='0.55'/><polygon points='220,400 420,130 600,400' fill='%231e293b' opacity='0.75'/></svg>" alt="Alpine Ridge at Dawn">
+                    <div class="dark-overlay"><span>Explore Vista</span></div>
+                </div>
+                <figcaption>1. Alpine Ridge at Dawn</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <div class="image-frame">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><defs><linearGradient id='g2' x1='0' y1='0' x2='0' y2='1'><stop offset='0%' stop-color='%23f59e0b'/><stop offset='100%' stop-color='%23b91c1c'/></linearGradient></defs><rect width='600' height='400' fill='url(%23g2)'/><circle cx='300' cy='210' r='75' fill='%23fef08a' opacity='0.85'/><rect y='270' width='600' height='130' fill='%23451a03' opacity='0.7'/></svg>" alt="Desert Horizon Sunset">
+                    <div class="dark-overlay"><span>Explore Vista</span></div>
+                </div>
+                <figcaption>2. Desert Horizon Sunset</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <div class="image-frame">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><defs><linearGradient id='g3' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%23065f46'/><stop offset='100%' stop-color='%2334d399'/></linearGradient></defs><rect width='600' height='400' fill='url(%23g3)'/><circle cx='160' cy='310' r='130' fill='%23064e3b' opacity='0.65'/><circle cx='440' cy='320' r='150' fill='%23022c22' opacity='0.75'/></svg>" alt="Emerald Canopy Valley">
+                    <div class="dark-overlay"><span>Explore Vista</span></div>
+                </div>
+                <figcaption>3. Emerald Canopy Valley</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <div class="image-frame">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><defs><linearGradient id='g4' x1='0' y1='0' x2='1' y2='0'><stop offset='0%' stop-color='%23312e81'/><stop offset='100%' stop-color='%239333ea'/></linearGradient></defs><rect width='600' height='400' fill='url(%23g4)'/><rect x='90' y='120' width='90' height='280' fill='%231e1b4b'/><rect x='220' y='80' width='110' height='320' fill='%230f172a'/><rect x='370' y='150' width='120' height='250' fill='%231e1b4b'/></svg>" alt="Midnight Metropolis Skyline">
+                    <div class="dark-overlay"><span>Explore Vista</span></div>
+                </div>
+                <figcaption>4. Midnight Metropolis Skyline</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <div class="image-frame">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><defs><linearGradient id='g5' x1='0' y1='0' x2='0' y2='1'><stop offset='0%' stop-color='%230284c7'/><stop offset='100%' stop-color='%230f766e'/></linearGradient></defs><rect width='600' height='400' fill='url(%23g5)'/><path d='M0,260 Q150,210 300,260 T600,260 L600,400 L0,400 Z' fill='%23cffafe' opacity='0.35'/></svg>" alt="Coastal Tide Reflections">
+                    <div class="dark-overlay"><span>Explore Vista</span></div>
+                </div>
+                <figcaption>5. Coastal Tide Reflections</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <div class="image-frame">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><defs><linearGradient id='g6' x1='0' y1='1' x2='1' y2='0'><stop offset='0%' stop-color='%23881337'/><stop offset='100%' stop-color='%23fb7185'/></linearGradient></defs><rect width='600' height='400' fill='url(%23g6)'/><polygon points='300,60 520,340 80,340' fill='%23fff1f2' opacity='0.25'/></svg>" alt="Crimson Geometric Pavilion">
+                    <div class="dark-overlay"><span>Explore Vista</span></div>
+                </div>
+                <figcaption>6. Crimson Geometric Pavilion</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Assignment 8 &bull; Question 3: Responsive Image Showcase</p>
+    </footer>
+</body>
+</html>

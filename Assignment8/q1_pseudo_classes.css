@@ -1,0 +1,174 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.55;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-header, .page-footer {
+    background-color: #0f172a;
+    color: #f8fafc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.page-header p {
+    color: #cbd5e1;
+    margin-top: 0.35rem;
+}
+
+.container {
+    flex: 1;
+    max-width: 1280px;
+    width: 100%;
+    margin: 2.5rem auto;
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Flexbox Row Aligning All Four Examples Neatly in One Row */
+.pseudo-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.demo-card {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.demo-card h2 {
+    font-size: 1.15rem;
+    color: #0f172a;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+.example-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90px;
+}
+
+.explanation {
+    font-size: 0.9rem;
+    color: #475569;
+    background-color: #f8fafc;
+    padding: 0.75rem;
+    border-radius: 6px;
+}
+
+/* 1. :hover Pseudo-Class on Link */
+.demo-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #1d4ed8;
+    background-color: #eff6ff;
+    border: 2px solid #2563eb;
+    padding: 0.6rem 1.15rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.demo-link:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+/* 2. :focus Pseudo-Class on Input */
+.demo-input {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.demo-input:focus {
+    outline: none;
+    border-color: #059669;
+    background-color: #ecfdf5;
+}
+
+/* 3. :active Pseudo-Class on Button */
+.demo-btn {
+    padding: 0.7rem 1.35rem;
+    background-color: #7c3aed;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.demo-btn:hover {
+    background-color: #6d28d9;
+}
+
+.demo-btn:active {
+    background-color: #4c1d95;
+    transform: scale(0.96);
+}
+
+/* 4. :nth-child() Pseudo-Class on List Items */
+.striped-list {
+    list-style: none;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #cbd5e1;
+}
+
+.striped-list li {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+.striped-list li:nth-child(odd) {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.striped-list li:nth-child(even) {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+/* Responsive wrap on narrow screens */
+@media (max-width: 920px) {
+    .pseudo-row {
+        flex-wrap: wrap;
+    }
+    .demo-card {
+        flex: 1 1 260px;
+    }
+}

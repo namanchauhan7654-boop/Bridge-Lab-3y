@@ -1,0 +1,95 @@
+/* Base Reset */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    background-color: #0f172a;
+    color: #f8fafc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.header p {
+    color: #cbd5e1;
+    margin-top: 0.4rem;
+}
+
+.center-stage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1rem;
+}
+
+/* Side-by-Side Flexbox Layout with Responsive Wrapping */
+.comparison-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+    max-width: 960px;
+    width: 100%;
+}
+
+/* Identical Width, Padding, and Border on Both Boxes */
+.compare-box {
+    width: 320px;
+    padding: 30px;
+    border: 8px solid #1e293b;
+    border-radius: 12px;
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
+}
+
+.compare-box h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    padding-bottom: 0.45rem;
+}
+
+.metric {
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+}
+
+.desc {
+    margin-top: 0.85rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+
+/* Box 1: Default content-box (320 + 60 + 16 = 396px wide) */
+.box-default {
+    box-sizing: content-box;
+    background-color: #dc2626; /* Contrasting Crimson */
+    border-color: #7f1d1d;
+}
+
+/* Box 2: border-box (Exact 320px wide) */
+.box-border {
+    box-sizing: border-box;
+    background-color: #0d9488; /* Contrasting Teal */
+    border-color: #115e59;
+}
+
+/* Responsive safeguard for very narrow viewports */
+@media (max-width: 440px) {
+    .compare-box {
+        width: 100%;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q7: User Interface Components Page</title>
+    <link rel="stylesheet" href="q7_ui_components.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Resource Finder UI Toolbar</h1>
+    </header>
+
+    <main class="main-stage">
+        <!-- Card-Like Container Aligned via Flexbox -->
+        <section class="ui-card" aria-label="Search and Filter Controls">
+            <h2>Search Directory</h2>
+            <p class="subtitle">Filter articles, tutorials, and documentation in real time.</p>
+
+            <form class="toolbar-flex" action="#" method="get">
+                <input type="search" class="ui-input" placeholder="Search keywords..." aria-label="Search keywords">
+
+                <select class="ui-select" aria-label="Category filter">
+                    <option value="all">All Categories</option>
+                    <option value="html">HTML5 Semantics</option>
+                    <option value="css">CSS Flexbox &amp; Grid</option>
+                    <option value="ui">UI Design Systems</option>
+                </select>
+
+                <button type="submit" class="ui-btn ui-btn-primary">Search</button>
+                <button type="reset" class="ui-btn ui-btn-secondary">Reset</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Assignment 8 &bull; Question 7: User Interface Components</p>
+    </footer>
+</body>
+</html>

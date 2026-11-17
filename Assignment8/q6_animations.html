@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6: CSS Keyframe Animations Demonstration</title>
+    <link rel="stylesheet" href="q6_animations.css">
+</head>
+<body>
+    <header class="header">
+        <h1>CSS <code>@keyframes</code> Animations Showcase</h1>
+        <p>Demonstrating <code>animation-delay</code>, <code>animation-iteration-count</code>, and <code>animation-direction</code>.</p>
+    </header>
+
+    <!-- Centered Vertically and Horizontally via Flexbox -->
+    <main class="animation-stage">
+        <section class="animation-grid" aria-label="Animated elements">
+            <!-- 1. Sliding Box -->
+            <article class="anim-card">
+                <h2>1. Sliding Box</h2>
+                <div class="track">
+                    <div class="sliding-box">Slide</div>
+                </div>
+                <p><code>alternate</code> direction &bull; <code>infinite</code> loop &bull; <code>0.3s</code> delay</p>
+            </article>
+
+            <!-- 2. Bouncing Ball -->
+            <article class="anim-card">
+                <h2>2. Bouncing Ball</h2>
+                <div class="bounce-well">
+                    <div class="bouncing-ball"></div>
+                </div>
+                <p><code>alternate</code> bounce &bull; <code>infinite</code> count &bull; <code>ease-in-out</code></p>
+            </article>
+
+            <!-- 3. Color-Shifting Pulse Text -->
+            <article class="anim-card">
+                <h2>3. Color-Changing Text</h2>
+                <div class="text-well">
+                    <span class="color-text">LIVE CSS</span>
+                </div>
+                <p><code>0.6s</code> delay &bull; <code>alternate</code> direction &bull; smooth color cycle</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Assignment 8 &bull; Question 6: CSS Keyframes &amp; Animation Timing</p>
+    </footer>
+</body>
+</html>

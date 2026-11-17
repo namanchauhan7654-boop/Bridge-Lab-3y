@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4: CSS Selectors Practice Page</title>
+    <link rel="stylesheet" href="q4_selectors_practice.css">
+</head>
+<body>
+    <!-- Semantic Header -->
+    <header id="top-banner">
+        <h1>CSS Selectors Reference &amp; Practice</h1>
+        <p>Demonstrating element, class, ID, attribute, and combinator selectors.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-wrapper">
+        <section class="card">
+            <h2>1. Basic Selectors (Element, Class, ID, Attribute)</h2>
+            <p>This paragraph is styled using a standard <strong>element selector</strong> (<code>p</code>).</p>
+            <p class="highlight-box">This paragraph uses a reusable <strong>class selector</strong> (<code>.highlight-box</code>).</p>
+            <p id="unique-callout">This element is targeted via a unique <strong>ID selector</strong> (<code>#unique-callout</code>).</p>
+
+            <div class="link-group">
+                <a href="https://www.w3.org" target="_blank" rel="noopener">W3C Official Portal (HTTPS Attribute Selector)</a>
+                <a href="#section-2" title="Internal Jump">Jump to Combinators Section (<code>[title]</code> Attribute Selector)</a>
+            </div>
+        </section>
+
+        <section id="section-2" class="card combinator-section">
+            <h2>2. Combinator Selectors (Descendant, &gt;, +, ~)</h2>
+            <p>This paragraph sits <em>immediately after</em> <code>&lt;h2&gt;</code>, matching the adjacent sibling combinator (<code>h2 + p</code>).</p>
+            <p>This second paragraph also follows <code>&lt;h2&gt;</code>, matching the general sibling combinator (<code>h2 ~ p</code>).</p>
+
+            <ul class="parent-list">
+                <li>Direct Child Item A (Matched by <code>.parent-list &gt; li</code>)</li>
+                <li>
+                    Direct Child Item B with nested list:
+                    <ul>
+                        <li>Nested Descendant Item (Matched by <code>.parent-list li li</code>)</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer class="site-footer">
+        <p>Assignment 8 &bull; Question 4: CSS Selectors Practice</p>
+    </footer>
+</body>
+</html>

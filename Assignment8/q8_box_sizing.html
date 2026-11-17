@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8: Box-Sizing Comparison Page</title>
+    <link rel="stylesheet" href="q8_box_sizing.css">
+</head>
+<body>
+    <header class="header">
+        <h1>CSS <code>box-sizing</code> Comparison</h1>
+        <p>Both boxes below have identical CSS declarations: <code>width: 320px;</code>, <code>padding: 30px;</code>, and <code>border: 8px solid;</code>.</p>
+    </header>
+
+    <main class="center-stage">
+        <section class="comparison-container" aria-label="Box sizing comparison">
+            <!-- Box 1: Default content-box -->
+            <article class="compare-box box-default">
+                <h2>1. Default (<code>content-box</code>)</h2>
+                <p class="metric"><strong>Declared Width:</strong> 320px</p>
+                <p class="metric"><strong>Total Rendered Width:</strong> 396px</p>
+                <p class="desc">Under the browser default <code>content-box</code>, padding (30px &times; 2) and borders (8px &times; 2) are added <em>on top of</em> the 320px width, making the box 76px wider than declared.</p>
+            </article>
+
+            <!-- Box 2: border-box -->
+            <article class="compare-box box-border">
+                <h2>2. <code>box-sizing: border-box;</code></h2>
+                <p class="metric"><strong>Declared Width:</strong> 320px</p>
+                <p class="metric"><strong>Total Rendered Width:</strong> 320px</p>
+                <p class="desc">With <code>border-box</code>, padding and borders are included <em>inside</em> the declared 320px width, keeping layout dimensions predictable and aligned.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Assignment 8 &bull; Question 8: Default vs. Border-Box Sizing</p>
+    </footer>
+</body>
+</html>

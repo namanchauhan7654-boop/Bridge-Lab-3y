@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1: CSS Pseudo-Classes Demonstration</title>
+    <link rel="stylesheet" href="q1_pseudo_classes.css">
+</head>
+<body>
+    <!-- Semantic Header -->
+    <header class="page-header">
+        <h1>CSS Pseudo-Classes in Action</h1>
+        <p>Interactive examples of <code>:hover</code>, <code>:focus</code>, <code>:active</code>, and <code>:nth-child()</code> aligned in one row.</p>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container">
+        <section class="pseudo-row" aria-label="Pseudo-class examples">
+            <!-- Example 1: :hover on Link -->
+            <article class="demo-card">
+                <h2>1. <code>:hover</code> State</h2>
+                <div class="example-area">
+                    <a href="#hover-demo" class="demo-link">Hover Over Link</a>
+                </div>
+                <p class="explanation">Triggers when the pointer rests over the link, shifting its background and text color smoothly.</p>
+            </article>
+
+            <!-- Example 2: :focus on Input & Link -->
+            <article class="demo-card">
+                <h2>2. <code>:focus</code> State</h2>
+                <div class="example-area">
+                    <input type="text" class="demo-input" placeholder="Click or Tab here">
+                </div>
+                <p class="explanation">Activates when an element receives keyboard or mouse focus, highlighting the input border.</p>
+            </article>
+
+            <!-- Example 3: :active on Button -->
+            <article class="demo-card">
+                <h2>3. <code>:active</code> State</h2>
+                <div class="example-area">
+                    <button type="button" class="demo-btn">Press &amp; Hold</button>
+                </div>
+                <p class="explanation">Applies at the exact moment a user clicks down on the button, darkening its fill.</p>
+            </article>
+
+            <!-- Example 4: :nth-child() on List Items -->
+            <article class="demo-card">
+                <h2>4. <code>:nth-child()</code></h2>
+                <div class="example-area">
+                    <ul class="striped-list">
+                        <li>First Item (Odd)</li>
+                        <li>Second Item (Even)</li>
+                        <li>Third Item (Odd)</li>
+                        <li>Fourth Item (Even)</li>
+                    </ul>
+                </div>
+                <p class="explanation">Selects elements by position, alternating background colors for odd and even rows.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer class="page-footer">
+        <p>Assignment 8 &bull; Question 1: CSS Pseudo-Classes</p>
+    </footer>
+</body>
+</html>

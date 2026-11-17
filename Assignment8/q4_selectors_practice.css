@@ -1,0 +1,142 @@
+/* Universal Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ID Selector (#top-banner): Styles the unique page header */
+#top-banner {
+    background-color: #0f172a;
+    color: #f8fafc;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+/* Element Selector (p): Applies baseline spacing to all paragraphs */
+p {
+    margin-bottom: 0.85rem;
+}
+
+/* Class Selector (.main-wrapper): Centers and constrains main page content */
+.main-wrapper {
+    flex: 1;
+    max-width: 860px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+/* Class Selector (.card): Provides consistent card padding, border, and shadow */
+.card {
+    background-color: #ffffff;
+    padding: 1.75rem;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+    color: #0f172a;
+}
+
+/* Class Selector (.highlight-box): Emphasizes key callout paragraphs */
+.highlight-box {
+    background-color: #eff6ff;
+    border-left: 4px solid #2563eb;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+}
+
+/* ID Selector (#unique-callout): Styles a single distinct notice element */
+#unique-callout {
+    background-color: #fef3c7;
+    border-left: 4px solid #d97706;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.link-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Attribute Selector (a[href^="https"]): Styles links beginning with https */
+a[href^="https"] {
+    color: #047857;
+    background-color: #ecfdf5;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid #10b981;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Attribute Selector (a[title]): Styles links that carry a title attribute */
+a[title] {
+    color: #1d4ed8;
+    background-color: #eff6ff;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid #3b82f6;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Adjacent Sibling Combinator (h2 + p): Styles ONLY the first <p> right after <h2> */
+.combinator-section h2 + p {
+    background-color: #f0fdf4;
+    border-left: 4px solid #16a34a;
+    padding: 0.65rem 1rem;
+    font-weight: 600;
+}
+
+/* General Sibling Combinator (h2 ~ p): Styles ALL <p> siblings following <h2> */
+.combinator-section h2 ~ p {
+    color: #334155;
+    padding-left: 0.75rem;
+}
+
+/* Child Combinator (.parent-list > li): Targets only direct child list items */
+.parent-list > li {
+    list-style: none;
+    background-color: #f1f5f9;
+    padding: 0.65rem 1rem;
+    margin-top: 0.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Descendant Combinator (.parent-list li li): Targets nested list items at any depth */
+.parent-list li li {
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+    color: #7c3aed;
+    font-weight: 500;
+    list-style-type: disc;
+}
+
+.site-footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 1.25rem;
+    font-size: 0.9rem;
+}

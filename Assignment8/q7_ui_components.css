@@ -1,0 +1,130 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Soft Background Gradient */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f2fe 0%, #ede9fe 50%, #fce7f3 100%);
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    background-color: rgba(15, 23, 42, 0.9);
+    color: #f8fafc;
+    text-align: center;
+    padding: 1.25rem;
+}
+
+.main-stage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+/* Card-Like Container */
+.ui-card {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    max-width: 820px;
+    width: 100%;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.1);
+}
+
+.ui-card h2 {
+    font-size: 1.5rem;
+    color: #0f172a;
+    margin-bottom: 0.35rem;
+}
+
+.subtitle {
+    color: #475569;
+    margin-bottom: 1.75rem;
+}
+
+/* Flexbox Alignment for Search Input, Dropdown, and Buttons */
+.toolbar-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.ui-input,
+.ui-select {
+    padding: 0.75rem 1rem;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background-color: #f8fafc;
+    color: #0f172a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.ui-input {
+    flex: 2 1 220px;
+}
+
+.ui-select {
+    flex: 1 1 170px;
+    cursor: pointer;
+}
+
+/* Focus Highlighting */
+.ui-input:focus,
+.ui-select:focus {
+    outline: none;
+    background-color: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.18);
+}
+
+/* Consistent Button Styling */
+.ui-btn {
+    padding: 0.75rem 1.35rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
+    transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.ui-btn:focus {
+    outline: 3px solid #f59e0b;
+    outline-offset: 2px;
+}
+
+.ui-btn:active {
+    transform: scale(0.97);
+}
+
+.ui-btn-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.ui-btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.ui-btn-secondary {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+.ui-btn-secondary:hover {
+    background-color: #cbd5e1;
+}

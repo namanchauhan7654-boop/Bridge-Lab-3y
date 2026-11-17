@@ -1,0 +1,109 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    background-color: #0f172a;
+    color: #f8fafc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.header p {
+    color: #cbd5e1;
+    margin-top: 0.35rem;
+}
+
+.container {
+    flex: 1;
+    max-width: 1140px;
+    width: 100%;
+    margin: 2.5rem auto;
+    padding: 0 1.25rem;
+}
+
+/* CSS Grid Arrangement for 6 Images */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+}
+
+/* Card Container with Rounded Corners and Shadow */
+.gallery-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+    transition: box-shadow 0.35s ease;
+}
+
+.gallery-card:hover {
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.18);
+}
+
+/* Image Frame Clipping Scaled Image */
+.image-frame {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3 / 2;
+}
+
+.image-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Semi-Transparent Dark Overlay */
+.dark-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.52);
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+/* Hover Effects: Scale(1.1) + Dark Overlay */
+.gallery-card:hover .image-frame img {
+    transform: scale(1.1);
+}
+
+.gallery-card:hover .dark-overlay {
+    opacity: 1;
+}
+
+figcaption {
+    padding: 1rem 1.15rem;
+    font-weight: 600;
+    font-size: 0.98rem;
+    color: #0f172a;
+    text-align: center;
+}
+
+/* Stack Images in One Column Below 700px */
+@media (max-width: 700px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
