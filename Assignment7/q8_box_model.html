@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8: CSS Box Model Exploration</title>
+    <link rel="stylesheet" href="q8_box_model.css">
+</head>
+<body>
+    <header class="header">
+        <h1>CSS Box Model &amp; Box-Sizing Exploration</h1>
+        <p>Visualizing Margin, Border, Padding, Content, and comparing <code>content-box</code> vs. <code>border-box</code>.</p>
+    </header>
+
+    <main class="main-flex">
+        <!-- Part 1: Visual Layer Diagram of the Box Model -->
+        <section class="diagram-section">
+            <h2>1. Anatomy of the CSS Box Model</h2>
+            <div class="legend">
+                <span class="badge margin-badge">Margin (24px)</span>
+                <span class="badge border-badge">Border (8px)</span>
+                <span class="badge padding-badge">Padding (24px)</span>
+                <span class="badge content-badge">Content Area</span>
+            </div>
+
+            <!-- Nested visual wrappers representing each layer -->
+            <div class="layer-margin" title="Margin Layer">
+                <span class="layer-label">MARGIN (Outer spacing separating elements)</span>
+                <div class="layer-border" title="Border Layer">
+                    <span class="layer-label">BORDER (Visible perimeter framing padding)</span>
+                    <div class="layer-padding" title="Padding Layer">
+                        <span class="layer-label">PADDING (Internal breathing room around content)</span>
+                        <div class="layer-content" title="Content Layer">
+                            <strong>CONTENT</strong>
+                            <p>Text, images, or child elements live inside this innermost rectangle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 2: content-box vs border-box Comparison -->
+        <section class="sizing-section">
+            <h2>2. <code>box-sizing: content-box</code> vs. <code>border-box</code></h2>
+            <p class="comparison-note">Both boxes below are explicitly declared with <code>width: 300px</code>, <code>padding: 25px</code>, and <code>border: 10px solid</code>.</p>
+
+            <div class="comparison-row">
+                <article class="sizing-box default-content-box">
+                    <h3>Default: <code>content-box</code></h3>
+                    <p><strong>Declared Width:</strong> 300px</p>
+                    <p><strong>Actual Rendered Width:</strong> <code>300 + 50 + 20 = 370px</code></p>
+                    <p>Padding and border are added <em>outside</em> the 300px content width.</p>
+                </article>
+
+                <article class="sizing-box modern-border-box">
+                    <h3>Modern: <code>border-box</code></h3>
+                    <p><strong>Declared Width:</strong> 300px</p>
+                    <p><strong>Actual Rendered Width:</strong> <code>300px</code> exact</p>
+                    <p>Padding and border are absorbed <em>inside</em> the 300px total width.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Assignment 7 &bull; Question 8: CSS Box Model &amp; Box-Sizing</p>
+    </footer>
+</body>
+</html>

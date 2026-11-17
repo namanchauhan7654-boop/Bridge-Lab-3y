@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2: Height and Width Practice Layout</title>
+    <link rel="stylesheet" href="q2_height_width.css">
+</head>
+<body>
+    <header class="header">
+        <h1>CSS Dimensions: Height, Width &amp; Overflow</h1>
+    </header>
+
+    <!-- Main Container Centered via Flexbox -->
+    <main class="flex-center-stage">
+        <section class="box-wrapper" aria-label="Dimension demonstration boxes">
+            <!-- Box 1: Fixed px & min-height -->
+            <article class="dim-box box-one">
+                <h2>Box 1 (px &amp; min-height)</h2>
+                <p><strong>Width:</strong> 260px</p>
+                <p><strong>Min-Height:</strong> 220px</p>
+                <p>Because this box uses <code>min-height</code>, it automatically expands vertically to accommodate extra text without clipping or spilling out.</p>
+            </article>
+
+            <!-- Box 2: Percentage, max-width, vh & overflow: auto -->
+            <article class="dim-box box-two">
+                <h2>Box 2 (%, max-width, vh &amp; overflow)</h2>
+                <p><strong>Width:</strong> 90% (capped at <code>max-width: 320px</code>)</p>
+                <p><strong>Height:</strong> 32vh with <code>overflow: auto</code></p>
+                <p>This container has a fixed viewport-relative height (32vh). When content exceeds this height, a vertical scrollbar appears cleanly inside the box instead of overflowing the layout boundaries. Keep scrolling to inspect how overflow handles long text blocks gracefully.</p>
+            </article>
+
+            <!-- Box 3: em units -->
+            <article class="dim-box box-three">
+                <h2>Box 3 (em Units)</h2>
+                <p><strong>Width:</strong> 18em (288px at 16px base)</p>
+                <p><strong>Height:</strong> 16em (256px at 16px base)</p>
+                <p>Using <code>em</code> scales the box dimensions proportionally to its font size.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Assignment 7 &bull; Question 2: CSS Height, Width, and Flexbox Centering</p>
+    </footer>
+</body>
+</html>

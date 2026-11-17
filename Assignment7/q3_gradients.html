@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3: Gradient Background Webpage</title>
+    <link rel="stylesheet" href="q3_gradients.css">
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header class="fixed-header">
+        <h1>CSS Gradients &amp; Fixed Parallax Layout</h1>
+    </header>
+
+    <!-- Main Content with Two Full-Height Gradient Sections -->
+    <main class="main-content">
+        <!-- Section 1: Linear Gradient -->
+        <section class="gradient-section linear-bg">
+            <div class="content-card">
+                <h2>1. Linear Gradient Background</h2>
+                <p>This section uses a multi-stop diagonal <code>linear-gradient(135deg, #1e3a8a, #3b82f6, #06b6d4)</code>.</p>
+                <p>Linear gradients transition colors smoothly along a straight line defined by an angle or direction keyword.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Radial Gradient with background-attachment: fixed -->
+        <section class="gradient-section radial-bg">
+            <div class="content-card">
+                <h2>2. Radial Gradient &amp; Fixed Attachment</h2>
+                <p>This section applies <code>radial-gradient(circle at center, #f43f5e, #881337, #1e1b4b)</code> combined with <code>background-attachment: fixed;</code>.</p>
+                <p>As you scroll past this section, the gradient remains locked to the viewport, creating a smooth parallax-like depth effect.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Fixed Footer -->
+    <footer class="fixed-footer">
+        <p>Assignment 7 &bull; Question 3: Fixed Header/Footer &amp; CSS Gradients</p>
+    </footer>
+</body>
+</html>

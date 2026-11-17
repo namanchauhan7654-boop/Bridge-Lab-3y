@@ -1,0 +1,138 @@
+/* Base Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    color: #1e293b;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Footer Styling */
+.page-header {
+    background-color: #0f172a;
+    color: #f8fafc;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+.container {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+.demo-section h2 {
+    text-align: center;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #475569;
+    margin-bottom: 2.5rem;
+}
+
+/* Flexbox Alignment for Horizontal Box Layout */
+.box-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+/* Base Styling for All Demo Boxes */
+.demo-box {
+    background-color: #ffffff;
+    flex: 1 1 240px;
+    max-width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    /* Smooth transition for border-color and subtle transform on hover */
+    transition: border-color 0.35s ease, transform 0.35s ease, background-color 0.35s ease;
+}
+
+.demo-box h3 {
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+}
+
+.demo-box p {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+}
+
+/* 1. Solid Border with Compact Padding and Slight Rounding */
+.box-solid {
+    border: 4px solid #3b82f6;
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.box-solid:hover {
+    border-color: #1d4ed8;
+    background-color: #eff6ff;
+    transform: translateY(-4px);
+}
+
+/* 2. Dashed Border with Medium Padding and Rounded Corners */
+.box-dashed {
+    border: 4px dashed #10b981;
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.box-dashed:hover {
+    border-color: #047857;
+    background-color: #ecfdf5;
+    transform: translateY(-4px);
+}
+
+/* 3. Double Border with Asymmetric Padding and High Border Radius */
+.box-double {
+    border: 6px double #f59e0b;
+    border-radius: 30px;
+    padding: 38px 24px;
+}
+
+.box-double:hover {
+    border-color: #b45309;
+    background-color: #fffbeb;
+    transform: translateY(-4px);
+}
+
+/* 4. Groove Border with Generous Padding and Asymmetric Radius */
+.box-groove {
+    border: 8px groove #8b5cf6;
+    border-radius: 50px 10px;
+    padding: 44px;
+}
+
+.box-groove:hover {
+    border-color: #5b21b6;
+    background-color: #f5f3ff;
+    transform: translateY(-4px);
+}
+
+.page-footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 0.9rem;
+}

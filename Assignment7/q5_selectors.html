@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5: Advanced CSS Selectors</title>
+    <link rel="stylesheet" href="q5_selectors.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Advanced CSS Selectors Showcase</h1>
+        <p>Demonstrating attribute selectors, combinators, pseudo-classes, and pseudo-elements.</p>
+    </header>
+
+    <main class="container">
+        <!-- Section 1: Combinators & Pseudo-elements -->
+        <section class="panel combinator-demo">
+            <h2>1. Combinators &amp; Pseudo-Elements</h2>
+            <p class="lead">This paragraph immediately follows <code>&lt;h2&gt;</code> (Adjacent Sibling <code>+</code>).</p>
+            <p>This is a general sibling paragraph following <code>&lt;h2&gt;</code> (General Sibling <code>~</code>).</p>
+
+            <ul class="topic-list">
+                <li>Child Item 1 (Direct child <code>&gt;</code> &amp; <code>:nth-child(odd)</code>)</li>
+                <li>Child Item 2 (<code>:nth-child(even)</code> &amp; <code>::before</code> badge)</li>
+                <li>
+                    Child Item 3 with nested list:
+                    <ul>
+                        <li>Nested Descendant Item (Styled via descendant selector)</li>
+                    </ul>
+                </li>
+                <li>Child Item 4 (Hover over any item for <code>:hover</code> highlight)</li>
+            </ul>
+        </section>
+
+        <!-- Section 2: Attribute Selectors & Pseudo-classes -->
+        <section class="panel attribute-demo">
+            <h2>2. Attribute Selectors &amp; Interactive States</h2>
+            <p>Links starting with <code>https</code> are automatically styled with <code>[href^="https"]</code> and an <code>::after</code> indicator:</p>
+
+            <ul class="resource-links">
+                <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs (HTTPS)</a></li>
+                <li><a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noopener">W3C CSS Specifications (HTTPS)</a></li>
+                <li><a href="#local-anchor">Internal Page Section (Non-HTTPS)</a></li>
+            </ul>
+
+            <form class="selector-form" action="#" method="get">
+                <label for="username">Text Input (<code>[type="text"]</code>):</label>
+                <input type="text" id="username" placeholder="Click to test :focus state">
+
+                <label for="email">Email Input (Standard input):</label>
+                <input type="email" id="email" placeholder="name@example.com">
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Assignment 7 &bull; Question 5: Advanced CSS Selectors</p>
+    </footer>
+</body>
+</html>

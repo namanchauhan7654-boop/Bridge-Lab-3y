@@ -1,0 +1,114 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    background-color: #0f172a;
+    color: #f8fafc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.header p {
+    color: #cbd5e1;
+    margin-top: 0.35rem;
+}
+
+.main-stage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1.5rem;
+}
+
+/* Flexbox Horizontal Layout */
+.transform-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.transform-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+/* Base Box with Required 0.4s Ease Transition */
+.transform-box {
+    width: 150px;
+    height: 150px;
+    border-radius: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.15);
+    /* Smooth transition for all transform properties */
+    transition: all 0.4s ease;
+}
+
+/* 1. Rotate Transformation */
+.box-rotate {
+    background-color: #2563eb;
+}
+.box-rotate:hover {
+    transform: rotate(25deg);
+    background-color: #1d4ed8;
+}
+
+/* 2. Scale Transformation */
+.box-scale {
+    background-color: #059669;
+}
+.box-scale:hover {
+    transform: scale(1.2);
+    background-color: #047857;
+}
+
+/* 3. Translate Transformation */
+.box-translate {
+    background-color: #d97706;
+}
+.box-translate:hover {
+    transform: translate(12px, -16px);
+    background-color: #b45309;
+}
+
+/* 4. Skew Transformation */
+.box-skew {
+    background-color: #7c3aed;
+}
+.box-skew:hover {
+    transform: skew(15deg, 8deg);
+    background-color: #6d28d9;
+}
+
+figcaption {
+    background-color: #e2e8f0;
+    padding: 0.45rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    color: #0f172a;
+}

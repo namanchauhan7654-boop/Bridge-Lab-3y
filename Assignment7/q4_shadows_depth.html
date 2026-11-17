@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4: Shadows and Depth Effect Layout</title>
+    <link rel="stylesheet" href="q4_shadows_depth.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1 class="depth-heading">Shadows &amp; Elevation Depth</h1>
+        <p>Hover over each profile card to observe smooth elevation and layered box-shadows.</p>
+    </header>
+
+    <main class="container">
+        <!-- Single-row Grid layout for 3 Profile Cards -->
+        <section class="cards-grid" aria-label="Team Profile Cards">
+            <!-- Card 1: Soft Diffused Shadow -->
+            <article class="profile-card shadow-soft">
+                <div class="avatar">AS</div>
+                <h2 class="card-title">Aarav Sharma</h2>
+                <p class="role">UI/UX Architect</p>
+                <p class="desc">Uses a wide, low-opacity diffused <code>box-shadow</code> for a gentle, floating surface feel.</p>
+            </article>
+
+            <!-- Card 2: Crisp Layered Shadow -->
+            <article class="profile-card shadow-layered">
+                <div class="avatar">PN</div>
+                <h2 class="card-title">Priya Nair</h2>
+                <p class="role">Frontend Engineer</p>
+                <p class="desc">Combines dual-layer shadows (ambient + direct key light) for realistic material elevation.</p>
+            </article>
+
+            <!-- Card 3: Offset Hard-Edge Accent Shadow -->
+            <article class="profile-card shadow-offset">
+                <div class="avatar">RV</div>
+                <h2 class="card-title">Rohan Verma</h2>
+                <p class="role">Design Systems Lead</p>
+                <p class="desc">Features a bold offset directional shadow that expands and lifts cleanly on hover.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>Assignment 7 &bull; Question 4: Box-Shadow, Text-Shadow &amp; Hover Transitions</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9: Outline and Focus Styling Form</title>
+    <link rel="stylesheet" href="q9_outline_focus.css">
+</head>
+<body>
+    <header class="header">
+        <h1>CSS Outline &amp; Focus Accessibility Form</h1>
+        <p>Click or press <kbd>Tab</kbd> through the fields to inspect custom outline styles and offsets.</p>
+    </header>
+
+    <main class="form-wrapper">
+        <section class="form-card" aria-labelledby="form-heading">
+            <h2 id="form-heading">Contact &amp; Feedback</h2>
+
+            <form action="#" method="post" class="styled-form">
+                <!-- Field 1: Solid Outline with Positive Offset -->
+                <div class="form-group">
+                    <label for="full-name">Full Name (Solid Outline + 4px Offset)</label>
+                    <input type="text" id="full-name" name="full-name" class="field-solid" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Field 2: Dashed Outline with Offset -->
+                <div class="form-group">
+                    <label for="email-address">Email Address (Dashed Outline + 3px Offset)</label>
+                    <input type="email" id="email-address" name="email-address" class="field-dashed" placeholder="you@example.com" required>
+                </div>
+
+                <!-- Field 3: Dotted Outline with Offset -->
+                <div class="form-group">
+                    <label for="subject">Subject (Dotted Outline + 5px Offset)</label>
+                    <input type="text" id="subject" name="subject" class="field-dotted" placeholder="Brief topic">
+                </div>
+
+                <!-- Field 4: Textarea with Double Outline -->
+                <div class="form-group">
+                    <label for="message">Message (Double Outline + 4px Offset)</label>
+                    <textarea id="message" name="message" rows="4" class="field-double" placeholder="Write your message here..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Assignment 7 &bull; Question 9: Outline, Outline-Offset, and :focus States</p>
+    </footer>
+</body>
+</html>

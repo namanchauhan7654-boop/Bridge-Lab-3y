@@ -1,0 +1,149 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f6;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    background-color: #0f172a;
+    color: #f8fafc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.header p {
+    color: #cbd5e1;
+    margin-top: 0.35rem;
+}
+
+.form-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1rem;
+}
+
+.form-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 2.25rem;
+    border-radius: 14px;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.1);
+}
+
+.form-card h2 {
+    margin-bottom: 1.5rem;
+    color: #0f172a;
+    text-align: center;
+}
+
+/* Uniform vertical spacing between form elements */
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.35rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+label {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* Base Input and Textarea Styling */
+input, textarea {
+    width: 100%;
+    padding: 0.75rem 0.95rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: #f8fafc;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: outline-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Default resting outlines (neutral slate) with distinct styles and offsets */
+.field-solid {
+    outline: 2px solid #cbd5e1;
+    outline-offset: 4px;
+}
+
+.field-dashed {
+    outline: 2px dashed #cbd5e1;
+    outline-offset: 3px;
+}
+
+.field-dotted {
+    outline: 3px dotted #cbd5e1;
+    outline-offset: 5px;
+}
+
+.field-double {
+    outline: 4px double #cbd5e1;
+    outline-offset: 4px;
+}
+
+/* Focus States: Change outline color prominently for clear visual feedback */
+.field-solid:focus {
+    background-color: #ffffff;
+    outline-color: #2563eb; /* Vibrant Blue */
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+.field-dashed:focus {
+    background-color: #ffffff;
+    outline-color: #059669; /* Emerald Green */
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.15);
+}
+
+.field-dotted:focus {
+    background-color: #ffffff;
+    outline-color: #d97706; /* Warm Amber */
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.15);
+}
+
+.field-double:focus {
+    background-color: #ffffff;
+    outline-color: #7c3aed; /* Royal Purple */
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+}
+
+.submit-btn {
+    margin-top: 0.5rem;
+    padding: 0.85rem;
+    background-color: #0f172a;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2);
+    transition: background-color 0.25s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: #2563eb;
+    outline: 2px solid #2563eb;
+    outline-offset: 3px;
+}

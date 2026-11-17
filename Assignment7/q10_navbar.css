@@ -1,0 +1,133 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Navigation Bar Container */
+.site-header {
+    background-color: #0f172a;
+    border-bottom: 3px solid #2563eb;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.85rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Horizontal Link List */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.nav-links a {
+    display: block;
+    text-decoration: none;
+    color: #e2e8f0;
+    font-weight: 500;
+    padding: 0.55rem 1.1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    /* Required smooth transition */
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    background-color: #1e293b;
+    border-color: #60a5fa;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Active Link Distinct Highlight */
+.nav-links a.active {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.45);
+}
+
+/* Main Content Area */
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1.5rem;
+}
+
+.hero-box {
+    max-width: 680px;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.07);
+    line-height: 1.65;
+}
+
+.hero-box h1 {
+    margin-bottom: 1rem;
+    color: #0f172a;
+}
+
+.hero-box p {
+    margin-bottom: 0.75rem;
+    color: #475569;
+}
+
+/* Footer with Simple Centered Text */
+.site-footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 1.25rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive Breakpoint: Stack Vertically Below 700px */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .brand {
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a {
+        text-align: center;
+    }
+}
