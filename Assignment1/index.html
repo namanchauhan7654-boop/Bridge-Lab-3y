@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 1 - Web Development Fundamentals</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ASSIGNMENT 1</h1>
+    <p>Web Development Fundamentals</p>
+    <p class="student">Name: ____________________ &nbsp; Roll No.: ____________________</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. Frontend, Backend and Full-Stack Development</h2>
+      <p><b>Frontend development</b> is the part of a website that users see and interact with. It includes the layout, buttons, forms, images and navigation. Common technologies are HTML, CSS and JavaScript. <b>Example:</b> the product page, search bar and shopping cart interface on an online shopping website.</p>
+      <p><b>Backend development</b> handles the server-side work. It receives requests, applies business rules, manages authentication and communicates with databases. Common technologies include Java, Python, PHP, Node.js and SQL. <b>Example:</b> checking a customer's login details and calculating an order total.</p>
+      <p><b>Full-stack development</b> combines frontend and backend development. A full-stack developer can work on the user interface as well as the server and database connection. <b>Example:</b> building an online shopping application, including its product pages, order processing and data storage.</p>
+      <table><tr><th>Type</th><th>Main focus</th><th>Example</th></tr>
+      <tr><td>Frontend</td><td>User interface</td><td>Shopping cart screen</td></tr>
+      <tr><td>Backend</td><td>Server logic and data processing</td><td>Processing a payment request</td></tr>
+      <tr><td>Full-stack</td><td>Frontend and backend</td><td>Complete shopping application</td></tr></table>
+    </section>
+
+    <section>
+      <h2>2. Client-Server Model Diagram</h2>
+      <p>The client (usually a browser) sends a request to a server. The server processes it and sends a response back to the client.</p>
+      <div class="diagram">
+        <div class="node">CLIENT<br><small>Browser / User</small></div>
+        <div class="arrow">Request →</div>
+        <div class="node">WEB SERVER<br><small>Processes request</small></div>
+        <div class="arrow">Response →</div>
+        <div class="node">CLIENT<br><small>Displays result</small></div>
+      </div>
+      <p class="note">The request and response travel over a network, commonly using HTTP or HTTPS.</p>
+    </section>
+
+    <section>
+      <h2>3. How a Browser Requests and Displays a Web Page</h2>
+      <ol>
+        <li>The user enters a website address (URL) or clicks a link.</li>
+        <li>The browser finds the server's IP address using DNS.</li>
+        <li>The browser establishes a connection to the server. HTTPS also establishes an encrypted TLS connection.</li>
+        <li>The browser sends an HTTP request for the page.</li>
+        <li>The web server processes the request and returns a response, such as HTML, CSS, JavaScript and images.</li>
+        <li>The browser parses the HTML to build the DOM and the CSS to build the CSSOM.</li>
+        <li>The browser combines the required information, calculates layout, paints the page and displays it.</li>
+        <li>JavaScript may run and request additional data or update parts of the page.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>4. Tools Required for a Web Development Environment</h2>
+      <table><tr><th>Tool</th><th>Purpose</th></tr>
+      <tr><td>Computer / Operating System</td><td>Provides the hardware and operating environment for development.</td></tr>
+      <tr><td>Visual Studio Code</td><td>Code editor used to write and manage HTML, CSS and JavaScript files.</td></tr>
+      <tr><td>Web browser</td><td>Runs and tests the website; examples include Chrome, Firefox and Edge.</td></tr>
+      <tr><td>Git</td><td>Tracks code changes and helps developers collaborate.</td></tr>
+      <tr><td>GitHub</td><td>Hosts Git repositories online for backup and collaboration.</td></tr>
+      <tr><td>Node.js and npm (when needed)</td><td>Run JavaScript tools and install project packages.</td></tr>
+      <tr><td>Browser Developer Tools</td><td>Inspect HTML/CSS, debug JavaScript and view network requests.</td></tr>
+      <tr><td>Local server / Live Server extension</td><td>Serves project files locally and refreshes the browser during development.</td></tr></table>
+    </section>
+
+    <section>
+      <h2>5. What is a Web Server?</h2>
+      <p>A <b>web server</b> is software (and the computer running it) that receives HTTP/HTTPS requests from clients and returns web content or responses. It can serve static files and can pass dynamic requests to application code.</p>
+      <p>Common examples are <b>Apache HTTP Server</b>, <b>Nginx</b>, <b>Microsoft IIS</b>, <b>Caddy</b> and <b>LiteSpeed Web Server</b>.</p>
+    </section>
+
+    <section>
+      <h2>6. Roles in a Web Development Project</h2>
+      <ul>
+        <li><b>Frontend Developer:</b> creates the user interface, makes pages responsive and accessible, and connects the interface to backend APIs.</li>
+        <li><b>Backend Developer:</b> builds server-side logic, authentication, APIs and application rules; also works with data storage.</li>
+        <li><b>Database Administrator (DBA):</b> installs, configures, secures, backs up and monitors databases, and helps maintain performance and data availability.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. Install and Configure VS Code</h2>
+      <ol>
+        <li>Visit <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a> and download the installer for your operating system.</li>
+        <li>Run the installer and follow the installation steps. On Windows, selecting “Add to PATH” and “Open with Code” is useful.</li>
+        <li>Open VS Code and create a folder named <code>WebDevelopment</code>.</li>
+        <li>Inside it, create <code>index.html</code>, <code>style.css</code> and <code>script.js</code>.</li>
+        <li>Install the optional <b>Live Server</b> extension from the Extensions panel to preview HTML pages locally.</li>
+        <li>Use the built-in browser Developer Tools (usually F12) to inspect and debug the page.</li>
+      </ol>
+      <p><b>Basic test files:</b></p>
+      <pre><code>&lt;!-- index.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, Web Development!&lt;/h1&gt;
+  &lt;button onclick="showMessage()"&gt;Click Me&lt;/button&gt;
+  &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+/ * style.css * /
+body { font-family: Arial, sans-serif; padding: 24px; }
+h1 { color: #2457a7; }
+
+/* script.js */
+function showMessage() {
+  alert("VS Code setup is working!");
+}</code></pre>
+      <div class="screenshot-box">
+        <b>Screenshot required for submission</b>
+        <p>After installing and opening VS Code on your computer, open your project folder with the three files visible. Take a real screenshot using <b>Win + Shift + S</b> (Windows) and insert it here or submit it as <code>vscode-setup-screenshot.png</code>.</p>
+        <p class="note">A screenshot cannot be captured from your computer by this assignment document. Please add your own screenshot after completing the setup.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>8. Static and Dynamic Websites</h2>
+      <p>A <b>static website</b> displays pages whose content is generally fixed and delivered as stored files. The same page is normally sent to every visitor unless the files are changed by the developer. <b>Example:</b> a simple portfolio or informational website made only with HTML and CSS.</p>
+      <p>A <b>dynamic website</b> can generate or update content based on user input, stored data, login status or other conditions. It commonly uses backend code and databases. <b>Example:</b> an online banking dashboard showing the signed-in customer's account information.</p>
+    </section>
+
+    <section>
+      <h2>9. Five Web Browsers and Their Rendering Engines</h2>
+      <table><tr><th>Browser</th><th>Rendering engine</th><th>Explanation</th></tr>
+      <tr><td>Google Chrome</td><td>Blink</td><td>Open-source engine used by Chromium-based browsers; it converts HTML and CSS into the displayed page.</td></tr>
+      <tr><td>Microsoft Edge</td><td>Blink</td><td>Modern Edge is based on Chromium and uses Blink for rendering.</td></tr>
+      <tr><td>Mozilla Firefox</td><td>Gecko</td><td>Mozilla's rendering engine, developed independently from Blink and WebKit.</td></tr>
+      <tr><td>Apple Safari</td><td>WebKit</td><td>Apple's browser engine, used by Safari on Apple platforms.</td></tr>
+      <tr><td>Opera</td><td>Blink</td><td>Modern Opera is Chromium-based and uses Blink.</td></tr></table>
+      <p>Rendering engines differ in their internal implementation, standards support, performance choices, layout and painting behavior, and timing of support for newer web features. As a result, developers should test websites in more than one browser. Note that a browser's JavaScript engine is separate from its rendering engine (for example, Chrome uses V8).</p>
+    </section>
+
+    <section>
+      <h2>10. Basic Web Architecture Flow: Client, Server, Database and APIs</h2>
+      <p>The client communicates with the server through HTTP requests. The server may call APIs or application services and read or update information in a database before returning a response.</p>
+      <div class="architecture">
+        <div class="arch-node">CLIENT<br><small>Browser / Mobile App</small></div>
+        <div class="down">↓ HTTP / HTTPS request</div>
+        <div class="arch-node">WEB SERVER<br><small>Receives the request</small></div>
+        <div class="down">↓ Routes request</div>
+        <div class="arch-node">APPLICATION / API<br><small>Business logic and data processing</small></div>
+        <div class="down">↕ Database query / result</div>
+        <div class="arch-node database">DATABASE<br><small>Stores users, products and records</small></div>
+        <div class="down">↑ HTTP response (JSON / HTML)</div>
+        <div class="arch-node">CLIENT DISPLAYS RESULT</div>
+      </div>
+      <p><b>API (Application Programming Interface):</b> a defined way for software components to communicate. For example, a frontend may call <code>/api/products</code> and receive product information in JSON format.</p>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>Web development combines frontend interfaces, backend processing, servers, APIs and databases. Understanding how these parts communicate helps developers build websites that are useful, reliable and maintainable.</p>
+    </section>
+  </main>
+  <footer>Assignment 1 — Web Development Fundamentals</footer>
+</body>
+</html>
