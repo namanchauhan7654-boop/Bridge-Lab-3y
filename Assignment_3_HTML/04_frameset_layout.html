@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!-- A frameset document uses frameset instead of body. Frameset is obsolete in HTML5 but is included here for this assignment. -->
+<html>
+<head>
+    <title>Frameset Layout</title>
+</head>
+<frameset rows="25%,75%">
+    <frame src="navigation.html" name="navigation" title="Navigation links">
+    <frame src="welcome.html" name="content" title="Welcome message">
+    <noframes>
+        <body>
+            <p>Your browser does not support frames.</p>
+        </body>
+    </noframes>
+</frameset>
+</html>
