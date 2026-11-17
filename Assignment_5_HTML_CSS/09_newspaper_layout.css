@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 2rem 1rem; background: #e8e2d7; color: #29251f; font-family: Georgia, serif; }
+.paper { max-width: 1100px; margin: auto; padding: clamp(1.2rem, 4vw, 3rem); background: #fffdf7; box-shadow: 0 10px 35px #342b1b20; }
+.masthead { text-align: center; border-bottom: 4px double #514638; padding-bottom: 1.2rem; }
+.masthead p { font: bold 0.75rem Arial, sans-serif; letter-spacing: 2px; }
+.masthead h1 { margin: 0.5rem 0; font-size: clamp(2rem, 5vw, 3.6rem); }
+.masthead .date { color: #756b5e; }
+.columns { column-count: 3; column-gap: 2rem; column-rule: 1px solid #d8d0c3; margin-top: 2rem; text-align: justify; font-size: 1rem; line-height: 1.8; }
+.columns h2 { column-span: all; margin: 0 0 1.2rem; text-align: left; font-size: 1.8rem; }
+.columns img { float: left; width: 42%; margin: 0.3rem 1rem 0.5rem 0; border-radius: 4px; }
+.columns p { margin: 0 0 1.2rem; }
+footer { margin-top: 2rem; padding-top: 1rem; border-top: 3px double #514638; text-align: center; font-style: italic; }
+@media (max-width: 850px) { .columns { column-count: 2; } }
+@media (max-width: 560px) { .columns { column-count: 1; } .columns img { width: 45%; } }

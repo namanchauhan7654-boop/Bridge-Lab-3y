@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: #f1f5f9; color: #1e293b; font-family: Arial, sans-serif; }
+.dashboard-header { position: fixed; z-index: 5; top: 0; left: 0; right: 0; height: 76px; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; background: #172554; color: white; box-shadow: 0 4px 12px #0f172a30; }
+.dashboard-header h1 { font-size: 1.3rem; }
+.layout { display: flex; padding-top: 76px; min-height: 100vh; }
+.sidebar { position: relative; flex: 0 0 230px; min-height: calc(100vh - 76px); padding: 2rem 1rem; background: #1e3a8a; }
+.sidebar nav { display: flex; flex-direction: column; gap: 0.6rem; }
+.sidebar a { padding: 0.9rem 1rem; border-radius: 8px; color: white; text-decoration: none; }
+.sidebar a:hover { background: #ffffff22; }
+.content { flex: 1; padding: 2.5rem; }
+.content h2 { margin-top: 0; }
+.boxes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.box { min-height: 190px; padding: 1.6rem; border-radius: 14px; background: white; box-shadow: 0 8px 22px #0f172a12; }
+.box h3 { color: #1d4ed8; }
+.box p { line-height: 1.7; color: #475569; }
+@media (max-width: 700px) {
+    .dashboard-header { position: relative; height: auto; min-height: 76px; flex-wrap: wrap; padding: 0.7rem 1rem; }
+    .layout { flex-direction: column; padding-top: 0; }
+    .sidebar { min-height: auto; flex-basis: auto; padding: 0.7rem; }
+    .sidebar nav { flex-direction: row; flex-wrap: wrap; }
+    .content { padding: 1.2rem; }
+    .boxes { grid-template-columns: 1fr; }
+}

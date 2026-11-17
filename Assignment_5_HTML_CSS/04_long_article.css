@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f1f3f5; color: #263238; font-family: Georgia, serif; }
+.article { max-width: 850px; margin: 3rem auto; padding: 3rem clamp(1.2rem, 5vw, 4rem); background: white; box-shadow: 0 8px 30px #172b3a12; }
+header { border-bottom: 1px solid #d9e0e5; padding-bottom: 1.5rem; }
+.category { color: #0b8278; font: bold 0.75rem Arial, sans-serif; letter-spacing: 2px; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.1; margin: 0.5rem 0; }
+.byline { color: #667085; font: 0.95rem Arial, sans-serif; }
+article { padding-top: 1rem; }
+article p { margin: 1.5rem 0; font-size: 1.08rem; line-height: 1.9; text-align: justify; }
+article p::first-letter { font-size: 2.4em; font-weight: bold; color: #0b8278; }
+article p::first-line { font-weight: bold; }
+mark { background: #fff0a8; color: #4b3b00; padding: 0 0.15em; }
+blockquote { margin: 2rem 0; padding: 1.5rem 2rem; border-left: 6px solid #0b8278; background: #eaf6f4; color: #24534e; font-size: 1.2rem; line-height: 1.7; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #d9e0e5; color: #667085; font: 0.85rem Arial, sans-serif; }
