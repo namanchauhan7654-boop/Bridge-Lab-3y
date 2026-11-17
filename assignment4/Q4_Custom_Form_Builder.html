@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q4 - Custom Form Builder</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; padding: 20px; }
+    .field { margin-bottom: 16px; }
+    label { display: block; margin-bottom: 6px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+    button { background: #28a745; color: white; border: none; padding: 12px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+    #output { margin-top: 25px; background: #f8f9fa; padding: 15px; border-radius: 6px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h2>Dynamic Form Builder</h2>
+  <div id="formContainer"></div>
+  <div id="output"></div>
+
+  <script>
+    "use strict";
+    // Q4: Custom Form Builder (Forms + Classes)
+
+    class FormBuilder {
+      constructor(fields) {
+        this.fields = fields; // array of {type, label, name, options?}
+        this.formElement = null;
+      }
+
+      // Create the form dynamically using innerHTML
+      render(containerId) {
+        const container = document.getElementById(containerId);
+        let html = '<form id="dynamicForm">';
+
+        this.fields.forEach((field, index) => {
+          const name = field.name || `field_${index}`;
+          html += `<div class="field">`;
+          html += `<label for="${name}">${field.label}</label>`;
+
+          if (field.type === "select" && field.options) {
+            html += `<select id="${name}" name="${name}">`;
+            field.options.forEach(opt => {
+              html += `<option value="${opt}">${opt}</option>`;
+            });
+            html += `</select>`;
+          } else if (field.type === "textarea") {
+            html += `<textarea id="${name}" name="${name}" rows="3"></textarea>`;
+          } else {
+            html += `<input type="${field.type || "text"}" id="${name}" name="${name}">`;
+          }
+          html += `</div>`;
+        });
+
+        html += `<button type="submit">Submit</button></form>`;
+        container.innerHTML = html;
+
+        this.formElement = document.getElementById("dynamicForm");
+        this.formElement.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const data = this.getFormData();
+          document.getElementById("output").textContent = "Form Data:\n" + JSON.stringify(data, null, 2);
+          console.log("Submitted data:", data);
+        });
+      }
+
+      // Returns all entered values as an object
+      getFormData() {
+        const data = {};
+        this.fields.forEach((field, index) => {
+          const name = field.name || `field_${index}`;
+          const el = document.getElementById(name);
+          if (el) data[name] = el.value;
+        });
+        return data;
+      }
+    }
+
+    // Example field configuration
+    const fieldConfig = [
+      { type: "text", label: "Username", name: "username" },
+      { type: "email", label: "Email Address", name: "email" },
+      { type: "password", label: "Password", name: "password" },
+      { type: "number", label: "Age", name: "age" },
+      { type: "select", label: "Gender", name: "gender", options: ["Male", "Female", "Other"] },
+      { type: "textarea", label: "Bio", name: "bio" }
+    ];
+
+    // Create and render the form
+    const builder = new FormBuilder(fieldConfig);
+    builder.render("formContainer");
+  </script>
+</body>
+</html>

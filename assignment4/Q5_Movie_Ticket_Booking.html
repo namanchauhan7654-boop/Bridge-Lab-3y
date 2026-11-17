@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q5 - Movie Ticket Booking</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 420px; margin: 40px auto; padding: 20px; }
+    .form-group { margin-bottom: 16px; }
+    label { display: block; margin-bottom: 5px; font-weight: bold; }
+    input { width: 100%; padding: 10px; border: 2px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+    input.valid { border-color: #28a745; }
+    input.invalid { border-color: #dc3545; }
+    .error { color: #dc3545; font-size: 13px; display: none; margin-top: 3px; }
+    button { width: 100%; padding: 12px; background: #6f42c1; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    #ticket { margin-top: 25px; padding: 20px; background: #f3e8ff; border-radius: 8px; display: none; }
+  </style>
+</head>
+<body>
+  <h2>Movie Ticket Booking</h2>
+  <form id="bookingForm" novalidate>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Alphabets only">
+      <div class="error" id="nameError">Name must contain only alphabets</div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="valid@email.com">
+      <div class="error" id="emailError">Enter a valid email format</div>
+    </div>
+    <div class="form-group">
+      <label for="seats">Number of Seats (1-10)</label>
+      <input type="number" id="seats" min="1" max="10" placeholder="1 to 10">
+      <div class="error" id="seatsError">Seats must be between 1 and 10</div>
+    </div>
+    <button type="submit">Book Ticket</button>
+  </form>
+
+  <div id="ticket"></div>
+
+  <script>
+    "use strict";
+    // Q5: Movie Ticket Booking (Objects + RegExp)
+
+    const nameRegex = /^[A-Za-z\s]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function validate(input, isValid, errorId) {
+      if (isValid) {
+        input.classList.remove("invalid");
+        input.classList.add("valid");
+        document.getElementById(errorId).style.display = "none";
+      } else {
+        input.classList.remove("valid");
+        input.classList.add("invalid");
+        document.getElementById(errorId).style.display = "block";
+      }
+      return isValid;
+    }
+
+    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const seatsInput = document.getElementById("seats");
+
+      const nameOk = validate(nameInput, nameRegex.test(nameInput.value.trim()), "nameError");
+      const emailOk = validate(emailInput, emailRegex.test(emailInput.value.trim()), "emailError");
+
+      const seatsVal = Number(seatsInput.value);
+      const seatsOk = validate(seatsInput, seatsVal >= 1 && seatsVal <= 10, "seatsError");
+
+      if (nameOk && emailOk && seatsOk) {
+        // Store booking info in an object
+        const booking = {
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim(),
+          seats: seatsVal
+        };
+
+        // Display the ticket details
+        const ticketDiv = document.getElementById("ticket");
+        ticketDiv.style.display = "block";
+        ticketDiv.innerHTML = `
+          <h3>🎫 Booking Confirmed!</h3>
+          <p><strong>Name:</strong> ${booking.name}</p>
+          <p><strong>Email:</strong> ${booking.email}</p>
+          <p><strong>Seats:</strong> ${booking.seats}</p>
+          <p>Enjoy the movie!</p>
+        `;
+        console.log("Booking object:", booking);
+      }
+    });
+  </script>
+</body>
+</html>
