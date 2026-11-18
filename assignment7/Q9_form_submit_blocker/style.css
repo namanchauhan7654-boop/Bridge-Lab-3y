@@ -1,0 +1,8 @@
+body { margin: 0; padding: 30px 16px; font-family: Arial, sans-serif; background: #f3f6fa; }
+.card { max-width: 440px; margin: auto; padding: 24px; background: white; border-radius: 12px; }
+form { display: grid; gap: 8px; }
+input { padding: 11px; border: 1px solid #aaa; border-radius: 6px; }
+input.invalid { border-color: #c62828; }
+.error { min-height: 16px; color: #c62828; }
+button { margin-top: 10px; padding: 11px; color: white; background: #2459c4; border: 0; border-radius: 6px; cursor: pointer; }
+#successMessage { color: #218838; font-weight: bold; }
