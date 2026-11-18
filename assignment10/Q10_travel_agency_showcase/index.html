@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WanderWays | Discover More</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar navbar-expand-lg navbar-dark travel-nav">
+    <div class="container"><a class="navbar-brand fw-bold" href="#">WanderWays</a><span class="navbar-text text-white">Journeys worth remembering</span></div>
+  </header>
+  <main>
+    <section class="container py-5">
+      <div class="text-center mb-4"><h1 class="display-5 fw-bold">Find your next escape</h1><p class="lead text-secondary">Explore remarkable places with travel made simple.</p></div>
+      <!-- Bootstrap carousel: data-bs-interval sets each slide's display time. -->
+      <div id="destinationCarousel" class="carousel slide carousel-fade shadow rounded-4 overflow-hidden" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3500"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=85" class="d-block w-100 destination-img" alt="Mountain lake surrounded by peaks"><div class="carousel-caption"><h2 class="fw-bold">The Swiss Alps</h2><p>Find your calm among majestic mountain views.</p></div></div>
+          <div class="carousel-item" data-bs-interval="4500"><img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=85" class="d-block w-100 destination-img" alt="Greek island buildings beside the sea"><div class="carousel-caption"><h2 class="fw-bold">Santorini, Greece</h2><p>Sunlit coastlines, blue seas, and island charm.</p></div></div>
+          <div class="carousel-item" data-bs-interval="4000"><img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1600&q=85" class="d-block w-100 destination-img" alt="Tropical beach with turquoise water"><div class="carousel-caption"><h2 class="fw-bold">Bali, Indonesia</h2><p>Discover tropical beauty and peaceful escapes.</p></div></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#destinationCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#destinationCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+      </div>
+    </section>
+    <section class="container pb-5">
+      <div class="row justify-content-center"><div class="col-lg-8">
+        <div class="d-flex justify-content-between mb-2"><h2 class="h5 mb-0">Your booking progress</h2><strong>70%</strong></div>
+        <div class="progress" role="progressbar" aria-label="Booking completion" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="height: 1.2rem;">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 70%">70% Complete</div>
+        </div>
+        <p class="text-secondary small mt-2">You're almost there. Complete your traveler details to continue.</p>
+      </div></div>
+    </section>
+  </main>
+  <footer class="travel-nav text-white py-4"><div class="container d-flex flex-wrap justify-content-between gap-2"><span>© 2026 WanderWays Travel</span><span>hello@wanderways.example · +91 98765 43210</span></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

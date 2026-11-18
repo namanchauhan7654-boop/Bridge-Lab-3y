@@ -1,0 +1,9 @@
+:root { --bs-primary: #8b4f3f; --bs-primary-rgb: 139,79,63; --bs-font-sans-serif: 'DM Sans', sans-serif; }
+body { font-family: var(--bs-font-sans-serif); background: #fbf8f4; color: #302b28; }
+h1, h2, .brand { font-family: 'Playfair Display', serif; }
+.brand, .eyebrow { color: var(--bs-primary); }
+.eyebrow { font-size: .78rem; font-weight: 700; letter-spacing: .12em; }
+.blog-card { border: 0; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; }
+.blog-card:hover { transform: translateY(-5px); box-shadow: 0 1rem 2rem rgba(48,43,40,.12); }
+.blog-card .card-img-top { height: 240px; object-fit: cover; }
+.footer { background: #302b28; color: #fff; }

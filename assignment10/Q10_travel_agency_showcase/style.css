@@ -1,0 +1,4 @@
+.travel-nav { background: #123d4a; }
+.destination-img { height: 480px; object-fit: cover; }
+.carousel-caption { background: rgba(0,0,0,.42); border-radius: .75rem; padding: 1rem; }
+@media (max-width: 576px) { .destination-img { height: 320px; } .carousel-caption { bottom: 1rem; padding: .5rem; } .carousel-caption p { margin-bottom: 0; font-size: .85rem; } }
