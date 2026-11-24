@@ -1,0 +1,7 @@
+$(function(){
+ $("#add").click(()=>$("#posts").append('<article class="post"><h3>New Post</h3><p>Write your content here.</p></article>'));
+ $("#featured").click(()=>$("#posts").prepend('<article class="post featured"><h3>Featured Post</h3><p>Our featured article.</p></article>'));
+ $("#remove").click(()=>$("#posts .post").last().remove());
+ $("#tag").click(()=>$("#posts .post").first().before('<span class="tag">NEW</span>').after('<span class="tag">BLOG</span>'));
+ $("#highlight").click(()=>$("#posts .post").filter(function(){return $(this).text().toLowerCase().includes("jquery")||$(this).text().toLowerCase().includes("web");}).addClass("highlight"));
+});

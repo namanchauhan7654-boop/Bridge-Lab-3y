@@ -1,0 +1,8 @@
+$(function(){
+ let current=0;$(".banner").hide().eq(0).show();
+ $("#hide").click(()=>$(".banner").hide());$("#show").click(()=>$(".banner").show());
+ $("#up").click(()=>$(".banner:visible").slideUp());$("#down").click(()=>$(".banner:hidden").slideDown());
+ $("#fadeout").click(()=>$(".banner:visible").fadeOut());$("#fadein").click(()=>$(".banner:hidden").fadeIn());
+ // Rotate banner visibility every five seconds.
+ setInterval(function(){let banners=$(".banner");banners.eq(current).fadeOut(400,function(){current=(current+1)%banners.length;banners.eq(current).fadeIn(400);});},5000);
+});

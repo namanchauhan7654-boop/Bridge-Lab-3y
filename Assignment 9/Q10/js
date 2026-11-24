@@ -1,0 +1,12 @@
+$(function(){
+ let registeredEmails=[]; // Demo uniqueness list (in-memory only).
+ $("#form").submit(function(e){e.preventDefault();let name=$("#name").val().trim(),email=$("#email").val().trim(),pass=$("#password").val(),valid=true;
+ $(".invalid").removeClass("invalid");$("#message").text("");
+ if(!name){$("#name").addClass("invalid");valid=false;}
+ if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||registeredEmails.includes(email.toLowerCase())){$("#email").addClass("invalid");valid=false;}
+ if(pass.length<8){$("#password").addClass("invalid");valid=false;}
+ if(valid){registeredEmails.push(email.toLowerCase());$("#message").text("Registration successful!").css("color","green");this.reset();}
+ else $("#message").text("Please correct the highlighted fields.").css("color","red");
+ });
+ $("#form input").on("input",function(){$(this).removeClass("invalid");});
+});

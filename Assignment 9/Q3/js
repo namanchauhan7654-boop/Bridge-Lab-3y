@@ -1,0 +1,8 @@
+$(function(){
+ $(".answer").hide();
+ $(".question").click(function(){$(this).next(".answer").toggle();});
+ $(".question").hover(function(){$(this).css("color","#2563eb");},function(){$(this).css("color","");});
+ $(".question").dblclick(function(){$(".answer").hide();});
+ $("input").focus(function(){$(this).parent().find(".question").css("background","#dbeafe");});
+ $("input").blur(function(){$(this).parent().find(".question").css("background","");});
+});

@@ -1,0 +1,8 @@
+$(function(){
+ $(".product").click(function(){ $(".product").removeClass("highlight");$(this).addClass("highlight");});
+ $(".product").hover(function(){ $(this).append('<small class="extra"> | Quality product for everyday use</small>');},function(){ $(this).find(".extra").remove();});
+ $(".fav").click(function(e){e.stopPropagation();$(this).toggleClass("selected").text($(this).hasClass("selected")?"♥ Favorited":"♡ Favorite");});
+ // Discount attribute selector adds a visual label/style.
+ $('[data-discount="true"]').addClass("discount");
+ $(".product").click(function(){if($(this).data("stock")==="no")alert("This product is out of stock!");});
+});

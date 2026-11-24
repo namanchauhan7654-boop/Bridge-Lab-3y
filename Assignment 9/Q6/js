@@ -1,0 +1,7 @@
+$(function(){
+ function subscriptionHandler(){let active=$(this).toggleClass("subscribed");$(this).text(active?"Subscribed":"Subscribe");$("#message").text(active?"Subscription enabled!":"Subscription disabled!");}
+ // Delegated .on() works for topics added later.
+ $("#topics").on("click",".topic",subscriptionHandler);
+ $("#add").click(function(){let t=$("#newTopic").val().trim();if(t){ $("#topics").append('<button class="topic">'+$("<div>").text(t).html()+'</button>');$("#newTopic").val("");$("#message").text("Topic added.");}});
+ $("#remove").click(function(){let topic=$("#topics").children().filter(function(){return $(this).text().includes("Technology");}).first();topic.off("click",subscriptionHandler).remove();$("#message").text("Technology removed.");});
+});

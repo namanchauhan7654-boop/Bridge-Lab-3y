@@ -1,0 +1,8 @@
+$(function(){
+ $(".contact").hide();
+ $(".manager").click(function(){$(this).siblings(".report").addClass("highlight");});
+ $(".member").hover(function(){$(this).next().find(".contact").show();$(this).find(".contact").show();},function(){$(".contact").hide();});
+ $(".department h2").click(function(){$(this).parent().children(".member").css("background","#dbeafe");});
+ $("#random").click(function(){let members=$(".member");let chosen=members.eq(Math.floor(Math.random()*members.length));chosen.addClass("highlight");chosen.siblings().removeClass("highlight");});
+ $("#collapse").click(function(){$(".team").parent().find(".member").toggle();});
+});

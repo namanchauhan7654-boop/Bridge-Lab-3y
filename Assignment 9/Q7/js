@@ -1,0 +1,9 @@
+$(function(){
+ function filterCourses(){let term=$("#search").val().toLowerCase(),count=0;
+ $(".course").each(function(){let text=$(this).text(),match=text.toLowerCase().includes(term);$(this).toggle(match);if(match)count++;
+ // Highlight matched query text visually using CSS background.
+ $(this).css("background",term&&match?"#fff3a6":"");});
+ $("#count").text(count+" course(s) found");}
+ $("#search").keyup(filterCourses);$("#clear").click(function(){$("#search").val("");filterCourses();});
+ filterCourses();
+});

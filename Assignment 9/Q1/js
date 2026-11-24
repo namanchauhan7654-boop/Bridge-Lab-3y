@@ -1,0 +1,7 @@
+$(function(){
+ let hour=new Date().getHours();
+ $("#greeting").text(hour<12?"Good Morning!":hour<18?"Good Afternoon!":"Good Evening!");
+ $("#greeting").on("click",()=>alert("Welcome!"));
+ $("#change").click(()=>$("#greeting").text("Believe in yourself and keep moving forward!"));
+ $("#toggle").click(()=>$("#welcome").toggle());
+});

@@ -1,0 +1,1 @@
+Assignment 9 - jQuery Exercises Q1-Q10\n\nOpen each Q folder and run index.html in your browser. Internet connection is needed for jQuery CDN scripts. Each question has its own HTML, JS, and CSS file.\n

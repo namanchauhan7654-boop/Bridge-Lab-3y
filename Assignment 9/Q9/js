@@ -1,0 +1,10 @@
+// jQuery 1 alias is jq1; jQuery 2 alias is jq2.
+jq1(function(){let index=0;let slides=jq1(".slide");slides.hide().eq(0).show();
+ jq1("#next").click(function(){slides.eq(index).hide();index=(index+1)%slides.length;slides.eq(index).show();});
+ jq1("#widget h2").click(function(){jq1(this).toggleClass("highlight");});
+ setInterval(function(){slides.eq(index).hide();index=(index+1)%slides.length;slides.eq(index).show();},4000);
+});
+jq2(function(){jq2("#notify").click(()=>jq2("#modal").fadeIn());jq2("#close").click(()=>jq2("#modal").fadeOut());
+ jq2("#widget h2").hover(function(){jq2(this).attr("title","This is the active dashboard widget");});
+ jq2("#versions").text("jQuery 1: "+jq1.fn.jquery+" | jQuery 2: "+jq2.fn.jquery);
+});
